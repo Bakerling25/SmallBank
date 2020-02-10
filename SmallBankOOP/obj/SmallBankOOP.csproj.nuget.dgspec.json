@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\SmallBankOOP.csproj": {}
+    "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\SmallBankOOP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\SmallBankOOP.csproj": {
+    "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\SmallBankOOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\SmallBankOOP.csproj",
+        "projectUniqueName": "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\SmallBankOOP.csproj",
         "projectName": "SmallBankOOP",
-        "projectPath": "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\SmallBankOOP.csproj",
-        "packagesPath": "C:\\Users\\claus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\obj\\",
+        "projectPath": "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\SmallBankOOP.csproj",
+        "packagesPath": "C:\\Users\\HFGF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\claus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HFGF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
