@@ -11,11 +11,14 @@ namespace SmallBankOOP
 
         public void DeleteKonti(List<Customer> customers, string username, int kontinummer)
         {
-            foreach (Customer item in customers)
+            foreach (Customer customer in customers)
             {
-                if (item.)
+                if (customer.UserName == username)
                 {
+                    foreach (Account items in customer.Accounts)
+                    {
 
+                    }
                 }
             }
         }
