@@ -6,6 +6,50 @@ namespace SmallBankOOP
 {
     class Administration:User
     {
+        private string adminNavn;
+        public string AdminNavn { get { return adminNavn; } set { adminNavn = value; } }
 
+        public void DeleteKonti(List<Customer> customers, string username, int kontinummer)
+        {
+            foreach (Customer item in customers)
+            {
+                if (item.)
+                {
+
+                }
+            }
+        }
+        public void DeleteKonto()
+        {
+
+        }
+        public void RegisterKunde()
+        {
+
+        }
+        public void RegisterNyKonti()
+        {
+
+        }
+        public void CheckSamledeKapital()
+        {
+
+        }
+        public void InsertMoney()
+        {
+
+        }
+        public void ShowKundeKonti()
+        {
+
+        }
+        public void Login()
+        {
+
+        }
+        public void UpdateKunde()
+        {
+
+        }
     }
 }
