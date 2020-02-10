@@ -20,6 +20,14 @@ namespace SmallBankOOP
             get { return kontiNummer; }
             set { kontiNummer = value; }
         }
-        public AccountType AccountType { get { return accountType; } }
+        public AccountType AccountType
+        {
+            get { return accountType; }
+            set { accountType = value; }
+        }
+        public void ShowSaldo()
+        {
+
+        }
     }
 }
