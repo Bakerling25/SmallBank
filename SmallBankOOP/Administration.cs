@@ -6,5 +6,6 @@ namespace SmallBankOOP
 {
     class Administration:User
     {
+        
     }
 }

@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\HFGF\\.nuget\\packages\\": {}
+    "C:\\Users\\claus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\SmallBankOOP.csproj",
+      "projectUniqueName": "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\SmallBankOOP.csproj",
       "projectName": "SmallBankOOP",
-      "projectPath": "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\SmallBankOOP.csproj",
-      "packagesPath": "C:\\Users\\HFGF\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HFGF\\source\\repos\\SmallBankOOP\\SmallBankOOP\\obj\\",
+      "projectPath": "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\SmallBankOOP.csproj",
+      "packagesPath": "C:\\Users\\claus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\claus\\source\\repos\\ObjectOrienteretProgrammingExercise1\\SmallBank\\SmallBankOOP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HFGF\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\claus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
