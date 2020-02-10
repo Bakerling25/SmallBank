@@ -11,21 +11,48 @@ namespace SmallBankOOP
 
         public void DeleteKonti(List<Customer> customers, string username, int kontinummer)
         {
-            foreach (Customer item in customers)
+            foreach (Customer customer in customers)
             {
-                if (item.)
+                if (customer.UserName == username)
                 {
+                    foreach (Account items in customer.Accounts)
+                    {
 
+                    }
                 }
             }
         }
-        public void DeleteKonto()
+        public void DeleteKonto(List<Customer> customers, string bruger)
         {
+            foreach (Customer customer in customers)
+            {
+                if (customer.UserName == bruger)
+                {
+                    customers.Remove(customer);
+                }
+            }
 
         }
-        public void RegisterKunde()
+        public void RegisterKunde(List<Customer> customers)
         {
+            string brugernavn;
+            Console.WriteLine("ny bruger laves nu: ");
+            Console.Write("Brugernavn er: ");
+            brugernavn = Console.ReadLine();
+            foreach (Customer customer in customers)
+            {
+                if (brugernavn == customer.UserName)
+                {
+                    goto end;
+                }
+            }
+            Console.WriteLine();
+            Console.Write("Password er: ");
+            string password = Console.ReadLine();
 
+
+        end:
+            Console.WriteLine("brugernavn eksistere allerede");
         }
         public void RegisterNyKonti()
         {
