@@ -50,7 +50,7 @@ namespace SmallBankOOP
         }
         public double Deposit(double amount)
         {
-
+            return amount;
         }
         public void Withdraw()
         {
