@@ -12,6 +12,11 @@ namespace SmallBankOOP
         private string email;
         private DateTime registerDate;
 
+        public int UserID { get { return userID; } set { userID = value; } }
+        public string Password { get { return password; } set { password = value; } }
+        public string Email { get { return email; } set { email = value; } }
+        public DateTime RegisterDate { get { return registerDate; } set { registerDate = value; } }
+
         public bool VerifyLogin(int id, string passwd,List<User> bruger)
         {
             foreach (User item in bruger)
@@ -24,6 +29,6 @@ namespace SmallBankOOP
             }
             return false;
         }
-
+        
     }
 }
