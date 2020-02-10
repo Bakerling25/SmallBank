@@ -39,6 +39,11 @@ namespace SmallBankOOP
             get { return userName; }
             set { userName = value; }
         }
+        public List<Account> Accounts
+        {
+            get { return accounts; }
+            set { accounts = value; }
+        }
 
     }
 }
