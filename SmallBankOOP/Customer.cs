@@ -44,6 +44,18 @@ namespace SmallBankOOP
             get { return accounts; }
             set { accounts = value; }
         }
+        public void ShowAllSaldo()
+        {
+
+        }
+        public double Deposit(double amount)
+        {
+
+        }
+        public void Withdraw()
+        {
+
+        }
 
     }
 }
