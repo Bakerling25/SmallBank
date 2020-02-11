@@ -27,6 +27,10 @@ namespace SmallBankOOP
         }
         public void ShowSaldo()
         {
+            Console.WriteLine("konti nr.: " + KontiNummer);
+            Console.WriteLine("er typen: " + AccountType);
+            Console.WriteLine("og har en saldo af: " + Saldo);
+            Console.ReadLine();
 
         }
     }

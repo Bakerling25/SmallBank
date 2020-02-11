@@ -8,6 +8,8 @@ namespace SmallBankOOP
     {
         static void Main(string[] args)
         {
+            List<Customer> customers = new List<Customer>();
+            
             int userNum;
             WriteLine("Velkommen til banken ");
             WriteLine("1. Login\n" + "2. Luk programet");

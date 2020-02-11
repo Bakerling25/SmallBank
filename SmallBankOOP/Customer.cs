@@ -40,17 +40,85 @@ namespace SmallBankOOP
             set { accounts = value; }
         }
         public Adresse Adresse { get { return addresse; } set { addresse = value; } }
-        public void ShowAllSaldo()
+        public void ShowAllSaldo(List<Customer> customers)
         {
-
+            Console.WriteLine("banken har disse kunder med deres konti og saldo: ");
+            Console.ReadLine();
+            foreach (Customer customer in customers)
+            {
+                for (int i = 0; i < Console.WindowWidth; i++)
+                {
+                    Console.Write("_");
+                }
+                Console.WriteLine();
+                Console.ReadLine();
+                Console.WriteLine(customer.UserName + "har disse konti hos banken: ");
+                foreach (Account account in customer.accounts)
+                {
+                    for (int i = 0; i < Console.WindowWidth; i++)
+                    {
+                        Console.Write("_");
+                    }
+                    Console.ReadLine();
+                    account.ShowSaldo();
+                    
+                }
+            }
         }
-        public double Deposit(double amount)
+        public double Deposit(List<Customer> customers, string bruger, int kontinummer, double amount)
         {
+            foreach (Customer customer in customers)
+            {
+                if (customer.UserName == bruger)
+                {
+                    foreach (Account account in customer.accounts)
+                    {
+                        if (account.KontiNummer == kontinummer)
+                        {
+                            if (account.AccountType == AccountType.Indlån)
+                            {
+                                account.Saldo += amount;
+                                Console.WriteLine("nye saldo er: " + account.Saldo);
+                                Console.ReadLine();
+                            }
+                            else if (account.AccountType == AccountType.Udlån)
+                            {
+                                account.Saldo -= amount;
+                                Console.WriteLine("på konti er der nu : " + account.Saldo);
+                                Console.ReadLine();
+                            }
+                        }
+                    }
+                }
+            }
             return amount;
         }
-        public void Withdraw()
+        public void Withdraw(List<Customer> customers, string bruger, int kontinummer, double udtræk)
         {
-
+            foreach (Customer customer in customers)
+            {
+                if (customer.UserName == bruger)
+                {
+                    foreach (Account account in customer.accounts)
+                    {
+                        if (account.KontiNummer == kontinummer)
+                        {
+                            if (account.AccountType == AccountType.Indlån)
+                            {
+                                account.Saldo -= udtræk;
+                                Console.WriteLine("nye saldo er: " + account.Saldo);
+                                Console.ReadLine();
+                            }
+                            else if (account.AccountType == AccountType.Udlån)
+                            {
+                                account.Saldo += udtræk;
+                                Console.WriteLine("på konti er der nu : " + account.Saldo);
+                                Console.ReadLine();
+                            }
+                        }
+                    }
+                }
+            }
         }
         public Customer(string forNavn, string brugerNavn, string efterNavn, string paswd, Adresse adresse, List<Account> accounts, string cprNummer, int userID, string email)
         {
