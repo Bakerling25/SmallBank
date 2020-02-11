@@ -10,7 +10,7 @@ namespace SmallBankOOP
         private string cpr;
         private string fuldeNavn;
         private string efterNavn;
-        private string addresse;
+        private Adresse addresse;
         private string userName;
         private List<Account> accounts;
 
@@ -28,11 +28,6 @@ namespace SmallBankOOP
         {
             get { return efterNavn; }
             set { efterNavn = value; }
-        }
-        public string Addresse
-        {
-            get { return addresse; }
-            set { addresse = value; }
         }
         public string UserName
         {
@@ -55,6 +50,15 @@ namespace SmallBankOOP
         public void Withdraw()
         {
 
+        }
+        public Customer(string forNavn, string brugerNavn, string efterNavn, string paswd, Adresse adresse, List<Account> accounts, string cprNummer)
+        {
+            Cpr = cprNummer;
+            FuldeNavn = forNavn;
+            EfterNavn = efterNavn;
+            addresse = adresse;
+            userName = brugerNavn;
+            Accounts = accounts;
         }
 
     }
