@@ -17,13 +17,13 @@ namespace SmallBankOOP
         public string Email { get { return email; } set { email = value; } }
         public DateTime RegisterDate { get { return registerDate; } set { registerDate = value; } }
 
-        public bool VerifyLogin(int id, string passwd,List<User> bruger)
+        public bool VerifyLogin(int id, string passwd,List<Customer> bruger)
         {
-            foreach (User item in bruger)
+            foreach (Customer customer in bruger)
             {
-                if (item.userID == id && item.password == passwd)
+                if (customer.userID == id && customer.password == passwd)
                 {
-                    item.loginStatus = true;
+                    customer.loginStatus = true;
                     return true;
                 }
             }

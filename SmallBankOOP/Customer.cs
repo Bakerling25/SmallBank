@@ -39,6 +39,7 @@ namespace SmallBankOOP
             get { return accounts; }
             set { accounts = value; }
         }
+        public Adresse Adresse { get { return addresse; } set { addresse = value; } }
         public void ShowAllSaldo()
         {
 
@@ -51,14 +52,18 @@ namespace SmallBankOOP
         {
 
         }
-        public Customer(string forNavn, string brugerNavn, string efterNavn, string paswd, Adresse adresse, List<Account> accounts, string cprNummer)
+        public Customer(string forNavn, string brugerNavn, string efterNavn, string paswd, Adresse adresse, List<Account> accounts, string cprNummer, int userID, string email)
         {
+            UserID = userID;
+            Email = email;
             Cpr = cprNummer;
             FuldeNavn = forNavn;
             EfterNavn = efterNavn;
             addresse = adresse;
-            userName = brugerNavn;
+            UserName = brugerNavn;
             Accounts = accounts;
+            Password = paswd;
+            RegisterDate = DateTime.Now;
         }
 
     }
