@@ -25,6 +25,9 @@ namespace SmallBankOOP
             get { return accountType; }
             set { accountType = value; }
         }
+        /// <summary>
+        /// bruges til at se saldoen for den bestemte konti
+        /// </summary>
         public void ShowSaldo()
         {
             Console.WriteLine("konti nr.: " + KontiNummer);

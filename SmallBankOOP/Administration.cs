@@ -7,8 +7,15 @@ namespace SmallBankOOP
     class Administration:User
     {
         private string adminNavn;
-        public string AdminNavn { get { return adminNavn; } set { adminNavn = value; } }
 
+        public string AdminNavn { get { return adminNavn; } set { adminNavn = value; } }
+        /// <summary>
+        /// med denne vil man slette en bestem brugers konti, ud fra hvad kundens brugernavn er
+        /// og hvad for en af kontierne der har det kontinummer man har givet
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, kan ses som en database, hvor alle tingene er i</param>
+        /// <param name="username">med dette finder man den bestemte kunde i listen(databasen)</param>
+        /// <param name="kontinummer">med denne finder man den rigtige konti, for at slette den fra listen af konti for kunden</param>
         public void DeleteKonti(List<Customer> customers, string username, int kontinummer)
         {
             foreach (Customer customer in customers)
@@ -26,6 +33,11 @@ namespace SmallBankOOP
             }
             WorkComplete();
         }
+        /// <summary>
+        /// sletter kunden fra listen/databasen med kunder
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
+        /// <param name="bruger">bruges til at finde den rigtige kunde på listen</param>
         public void DeleteKonto(List<Customer> customers, string bruger)
         {
             foreach (Customer customer in customers)
@@ -37,6 +49,10 @@ namespace SmallBankOOP
             }
             WorkComplete();
         }
+        /// <summary>
+        /// man tilføjer en ny kunde til vores liste, hvor at man kun skal have listen, som man tilføjer ting til
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
         public void RegisterKunde(List<Customer> customers)
         {
             int userID;
@@ -106,6 +122,11 @@ namespace SmallBankOOP
         end:
             Console.WriteLine("brugernavn eksistere allerede");
         }
+        /// <summary>
+        /// bruges til at lave sætte en ny konti op for kunden, og hvad for en type kontien er,
+        /// samt hvad for et beløb der er skal sættes ind, til den nye konti
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
         public void RegisterNyKonti(List<Customer> customers)
         {
             Console.WriteLine("hvilken kunde skal have en ny konti tilføjet: ");
@@ -141,6 +162,11 @@ namespace SmallBankOOP
             }
             WorkComplete();
         }
+        /// <summary>
+        /// checker alle kunders indlån og udlåns saldo, og giver et resultat for begge kontityper
+        /// og giver banken et resultat der er hvad banken holder for kunderne, og hvad kunderne skylder dem
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
         public void CheckSamledeKapital(List<Customer> customers)
         {
             double totalIndLånSaldo = 0;
@@ -163,6 +189,13 @@ namespace SmallBankOOP
             Console.WriteLine("den totale indlåns saldo for banken er er: " + totalIndLånSaldo + " kr.\r\n" +
                 "og den totale udlåns saldo for banken er: " + totalUdlånSaldo + " kr.");
         }
+        /// <summary>
+        /// sætter en bestemt mængde penge ind i den udvalgte kundes bestemte konti
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
+        /// <param name="bruger">den bruger som skal have penge sat på en af kontierne der er på kunden</param>
+        /// <param name="kontiNummer">kontiens nummer til at finde den rigtige hvor pengene skal ind</param>
+        /// <param name="money">en double værdi med mængden af penge der bliver sat ind</param>
         public void InsertMoney(List<Customer> customers, string bruger,int kontiNummer ,double money)
         {
             foreach (Customer customer in customers)
@@ -180,6 +213,11 @@ namespace SmallBankOOP
             }
             WorkComplete();
         }
+        /// <summary>
+        /// viser den bestemte kundes kontier og hvad det er for en konti(indlån/udlån) og hvor mange penge der er på den givne konti
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
+        /// <param name="bruger">hvilken kunde man skal have et overblik over</param>
         public void ShowKundeKonti(List<Customer> customers,string bruger)
         {
             foreach (Customer customer in customers)
@@ -206,6 +244,14 @@ namespace SmallBankOOP
                 }
             }
         }
+        /// <summary>
+        /// bruges til at kalde på Verify login på User.cs hvor vi sender til den listen over hvem der har adgang til systemet
+        /// og hvad brugerid og password er for den prøvende login attempt
+        /// </summary>
+        /// <param name="administrations"> en liste over administrators der kan tilgå vores forskellige metoder</param>
+        /// <param name="brugerid">bruges til at finde den givne administrator som vil tilgå systemet</param>
+        /// <param name="paswd">administratorens adgangskode/password</param>
+        /// <returns></returns>
         public bool Login(List<Administration> administrations,int brugerid, string paswd)
         {
             if (VerifyLogin(brugerid,paswd,administrations)== true)
@@ -222,11 +268,20 @@ namespace SmallBankOOP
             }
             
         }
+        /// <summary>
+        /// metode til at sige at den kaldte metode man har brugt er færdig med at køre
+        /// </summary>
         public void WorkComplete()
         {
             Console.WriteLine("opgaven er færdig nu");
             Console.ReadLine();
         }
+        /// <summary>
+        /// bruges til at opdatere kunden, hvis der er sket ændringer i kundes hverdag, som man er blevet gift
+        /// flyttet, skal have nyt password, har skiftet email og lign.
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
+        /// <param name="bruger">som skal have ændringerne lavet</param>
         public void UpdateKunde(List<Customer> customers, string bruger)
         {
             foreach (Customer customer in customers)

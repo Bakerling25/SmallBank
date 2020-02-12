@@ -40,6 +40,10 @@ namespace SmallBankOOP
             set { accounts = value; }
         }
         public Adresse Adresse { get { return addresse; } set { addresse = value; } }
+        /// <summary>
+        /// bruges til at tilgå Account.Saldo for at se hver konti for kunderne
+        /// </summary>
+        /// <param name="customers">hele listen af kunder, som kan ses som en database, med alle relevatnte informationer</param>
         public void ShowAllSaldo(List<Customer> customers)
         {
             Console.WriteLine("banken har disse kunder med deres konti og saldo: ");
