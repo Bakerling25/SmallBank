@@ -24,6 +24,7 @@ namespace SmallBankOOP
                     }
                 }
             }
+            WorkComplete();
         }
         public void DeleteKonto(List<Customer> customers, string bruger)
         {
@@ -34,7 +35,7 @@ namespace SmallBankOOP
                     customers.Remove(customer);
                 }
             }
-
+            WorkComplete();
         }
         public void RegisterKunde(List<Customer> customers)
         {
@@ -101,7 +102,7 @@ namespace SmallBankOOP
                 adresse = new Adresse(streetName, byNavn, zipCode, husNummer);
             }
             customers.Add(new Customer(forNavn, brugernavn, efterNavn, password, adresse, accounts, cprNummer,userID,email));
-
+            WorkComplete();
         end:
             Console.WriteLine("brugernavn eksistere allerede");
         }
@@ -138,7 +139,7 @@ namespace SmallBankOOP
                     customer.Accounts.Add(account);
                 }
             }
-
+            WorkComplete();
         }
         public void CheckSamledeKapital(List<Customer> customers)
         {
@@ -161,7 +162,6 @@ namespace SmallBankOOP
             }
             Console.WriteLine("den totale indlåns saldo for banken er er: " + totalIndLånSaldo + " kr.\r\n" +
                 "og den totale udlåns saldo for banken er: " + totalUdlånSaldo + " kr.");
-
         }
         public void InsertMoney(List<Customer> customers, string bruger,int kontiNummer ,double money)
         {
@@ -178,6 +178,7 @@ namespace SmallBankOOP
                     }
                 }
             }
+            WorkComplete();
         }
         public void ShowKundeKonti(List<Customer> customers,string bruger)
         {
@@ -205,9 +206,9 @@ namespace SmallBankOOP
                 }
             }
         }
-        public bool Login(List<Customer> customers,int brugerid, string paswd)
+        public bool Login(List<Administration> administrations,int brugerid, string paswd)
         {
-            if (VerifyLogin(brugerid,paswd,customers)== true)
+            if (VerifyLogin(brugerid,paswd,administrations)== true)
             {
                 Console.WriteLine("du er nu logget ind");
                 Console.ReadLine();
@@ -220,6 +221,11 @@ namespace SmallBankOOP
                 return false;
             }
             
+        }
+        public void WorkComplete()
+        {
+            Console.WriteLine("opgaven er færdig nu");
+            Console.ReadLine();
         }
         public void UpdateKunde(List<Customer> customers, string bruger)
         {
